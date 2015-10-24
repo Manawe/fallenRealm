@@ -7,14 +7,11 @@ a {
   color: #00B7FF;
 }
 canvas{
-  width: 1920px;
-  height: 1080px;
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0.2;
 }
-/*#groundTilesCanvas {  
+/*#groundTilesCanvas {
   background-color: blue;
 }
 #objectTilesCanvas {

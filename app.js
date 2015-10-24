@@ -9,8 +9,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var game = require('./routes/game');
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test:27017');
+//var mongoose = require('mongoose');
+//mongoose.connect('mongodb://localhost/test:27017');
 //var fs = require('fs');
 //
 // //Notify if connected succesfully
@@ -50,6 +50,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+
 app.use('/users', users);
 //Use game.js from routes folder
 app.use('/game', game);
@@ -60,8 +61,6 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
-
-// error handlers
 
 // development error handler
 // will print stacktrace
