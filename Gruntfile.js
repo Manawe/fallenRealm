@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     concat: {
       js: {
-        src: ['game/javascripts/*.js'],
+        src: ['game/javascripts/engine.js', 'game/javascripts/generate.js',],
         dest: 'public/javascripts/release.js',
       },
       // css: {
@@ -15,14 +15,14 @@ module.exports = function(grunt) {
     watch : {
       js: {
         files: ['game/javascripts/*.js'],
-        tasks: 'build/release.js',
+        tasks: 'concat',
         options: {
           spawn: false,
         },
       },
       css: {
         files: ['game/stylesheets/*.css'],
-        tasks: 'css/style.css',
+        tasks: 'concat',
         options: {
           spawn: false,
         },
